@@ -1,0 +1,20 @@
+Usage: bookcatalog [OPTION]... [book data]...
+ ----Manages books inventory system.
+Book can have the ISBN,PRICE,TITLE,AUTHOR,PUBLISHER,TAGS type of details.
+
+  add [book details],         Add     Adds the specified new book to inventory.
+  remove -isbn [isbn number], Remove  removes the specified book details of inventory. 
+  update [book details],      Update  Updates the specified book details of inventory.
+  list,                       List    Displays all books of inventory and exit.
+  tags add [isbn,tag],        Tags    Adds the tag to book in inventory which have 
+                                      given isbn.
+  tags remove [isbn,tag],     Tags    Removes the tag to book in inventory which have 
+                                      given isbn.
+  search [key],               Search  searches the key in inventory and displays result.
+  search "",                  Search  Displays all books of inventory and exit.
+  search [field name] [key]   Search  Displays books of inventory by given field and exit.
+  --help,                     --h     display this help and exit.
+    
+[Tip]: Use only one option at the same time.  
+
+Report bugs and give feedback to <surajbab@thoughtworks.com>.
