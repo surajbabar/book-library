@@ -1,8 +1,9 @@
 var users = require('./users').profiles;
 var fs = require('fs'); 
-var home = fs.readFileSync("home.html","utf-8");
+var homePage = fs.readFileSync("home.html","utf-8");
+var loginPage = fs.readFileSync("login.html","utf-8");
 var visitHome = function(profile){     
-	window.document.write(home);
+	window.document.write(homePage.replace('USERNAME',profile.Name));
 };
 var visitLogin = function(){
 	console.log("INcorrect id");
@@ -34,6 +35,6 @@ exports.add_notice = function(req, res){
 	fs.writeFile('./routes/notices.json',JSON.stringify(notices));
 	res.redirect('/home'); 
 };
-exports.logout = function(req,res){
-	visitLogin(req,res);
+exports.logout = function(){
+	window.document.write(loginPage);
 };

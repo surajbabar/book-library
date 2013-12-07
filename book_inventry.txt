@@ -1,0 +1,20 @@
+{"isbn":"357468","price":"547468","author":"-","publisher":"-","title":"-"}
+{"isbn":"37468","price":"547468","author":"no","publisher":"-","title":"-","tags":[]}
+{"isbn":"3468","price":"547468","author":"no","publisher":"-","title":"-","tags":[]}
+{"isbn":"    37468","price":"547468","author":"no","publisher":"-","title":"-","tags":[]}
+{"isbn":"5905767","price":"-","author":"-","publisher":"-","title":"-","tags":["sasha"]}
+{"isbn":"43268357690","price":"-","author":"-","publisher":"-","title":"-"}
+{"isbn":"43268350","price":"469","title":"dougdsf","author":"-","publisher":"-"}
+{"isbn":"3567098","price":"-","author":"-","publisher":"-","title":"-","tags":"-"}
+{"isbn":"357098","suraj":"something","price":"-","author":"-","publisher":"-","title":"-","tags":"-"}
+{"isbn":"jhg","price":"-","author":"-","publisher":"-","title":"-","tags":"-"}
+{"isbn":"1234","price":"-","author":"-","publisher":"-","title":"-","tags":["samiksha","sasha"]}
+{"isbn":"65432345678","price":"-","author":"-","publisher":"-","title":"-","tags":[""]}
+{"isbn":"0058","price":"2405","author":"Jhumpa Lahiri","title":"The Namesake","publisher":"Harper Collins India","tags":[]}
+{"isbn":"2345","price":"-","author":"-","title":"-","publisher":"-","tags":[]}
+{"isbn":"234","price":"23456","author":"-","title":"-","publisher":"-","tags":[]}
+{"isbn":"23456&","price":"-","author":"-","title":"-","publisher":"-","tags":[]}
+{"isbn":"2345&","tags":"fdsas","price":"-","author":"-","title":"-","publisher":"-"}
+{"isbn":"23452","tags":[],"price":"-","author":"-","title":"-","publisher":"-"}
+{"isbn":"232","price":"-","author":"-","title":"-","publisher":"-","tags":[]}
+{"isbn":"23erty2","price":"-","author":"-","title":"-","publisher":"-","tags":[]}
