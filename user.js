@@ -2,8 +2,13 @@ var users = require('./users').profiles;
 var fs = require('fs'); 
 var homePage = fs.readFileSync("home.html","utf-8");
 var loginPage = fs.readFileSync("login.html","utf-8");
+var librarianPage = fs.readFileSync("librarian.html","utf-8");
 var visitHome = function(profile){     
-	window.document.write(homePage.replace('USERNAME',profile.Name));
+	var isAdmin = profile.Name=="suraj" &&profile.password=="sumit"
+	if(isAdmin)
+		window.document.write(LibrarianPage);
+	else
+		window.document.write(homePage.replace('USERNAME',profile.Name));
 };
 var visitLogin = function(){
 	console.log("INcorrect id");
