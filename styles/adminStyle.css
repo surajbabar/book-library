@@ -1,0 +1,16 @@
+#logOption{
+	position: fixed;
+	right: 10;
+	top: 10;
+}
+
+.forms{
+	position: fixed;
+	clear: both;
+	left: 200;
+	top: 100;
+	background-color: gray;
+	height: 300;
+	width :300;
+	display: none;
+}

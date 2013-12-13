@@ -1,14 +1,28 @@
 var users = require('./users').profiles;
 var fs = require('fs'); 
 var homePage = fs.readFileSync("home.html","utf-8");
+var library = require('./library/books_lib').record;
 var loginPage = fs.readFileSync("login.html","utf-8");
 var librarianPage = fs.readFileSync("librarian.html","utf-8");
+var books = library.Inventory();
 var visitHome = function(profile){     
-	var isAdmin = profile.Name=="suraj" &&profile.password=="sumit"
-	if(isAdmin)
-		window.document.write(LibrarianPage);
-	else
+	var isUser = profile.id!="admin" &&profile.password!="admin";
+	if(isUser)
 		window.document.write(homePage.replace('USERNAME',profile.Name));
+	else{
+		var ISBNs = [];
+		console.log(books);
+		var getISBN = function (bookdetails) {
+	bookdetails = JSON.parse(bookdetails);
+	var ISBN = "<option value="+bookdetails.isbn+">"+bookdetails.isbn+"</option>";
+	console.log(ISBN);			
+	ISBNs.push(ISBN);
+	};
+		books.pop();
+		books.forEach(getISBN);
+		librarianPage = librarianPage.replace('SELECT_ISBN',ISBNs);
+		window.document.write(librarianPage.replace('USERNAME',profile.Name));
+	}	
 };
 var visitLogin = function(){
 	console.log("INcorrect id");

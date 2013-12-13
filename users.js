@@ -1,2 +1,4 @@
 exports.profiles = {
-		"suraj" :{id:"suraj", password : "sumit" , Name : "suraj babar" }};
+		"admin" :{id:"admin", password : "admin" , Name : "ADMIN" },
+		"user" :{id:"user", password : "susu" , Name : "suraj sumit" }
+	};

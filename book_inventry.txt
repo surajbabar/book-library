@@ -1,5 +1,3 @@
-{"isbn":"357468","price":"547468","author":"ramesh","publisher":"-","title":"the book	"}
-{"isbn":"37468","price":"547468","author":"no","publisher":"-","title":"-","tags":[]}
-{"isbn":"3468","price":"547468","author":"no","publisher":"-","title":"-","tags":[]}
-{"isbn":"    37468","price":"547468","author":"no","publisher":"-","title":"-","tags":[]}
-{"isbn":"5905767","price":"-","author":"-","publisher":"-","title":"-","tags":["sasha"]}
+{"isbn":"7","price":"4","author":"sdfg","title":"df","publisher":"fg"}
+{"isbn":"9","price":"7","author":"sdfgh","title":"sdfg","publisher":"dfgbhn"}
+{"isbn":"23456789","price":"7","author":"sdfgh","title":"sdfg","publisher":"dfgbhn"}
