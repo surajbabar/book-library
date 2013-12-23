@@ -15,22 +15,29 @@
 			<button onclick = "showUpdate()">Update book</button>
 		<div Id = "add" class = "forms">
 			<p>Add New book to library</p>
-			<input type = "number"  placeholder = "Enter ISBN" id="book_isbn"  required = "true"/>
-			<input type = "text"  placeholder = "Enter book title" id="book_title" required = "true"/>
-			<input type = "text"  placeholder = "Enter author name" id="book_author" required = "true"/>
-			<input type = "text"  placeholder = "Enter book publisher" id="book_publisher" required = "true"/>
-			<input type = "number"  placeholder = "Enter book price" id="book_price" required = "true"/>
+			<input type = "number"  placeholder = "Enter ISBN" id="add_isbn"  required = "true"/>
+			<label id = "isbn_error">Entered Isbn is duplicate</label>
+			<input type = "text"  placeholder = "Enter book title" id="add_title" required = "true"/>
+			<input type = "text"  placeholder = "Enter author name" id="add_author" required = "true"/>
+			<input type = "text"  placeholder = "Enter book publisher" id="add_publisher" required = "true"/>
+			<input type = "number"  placeholder = "Enter book price" id="add_price" required = "true"/>
 			<button onclick = "addBook()">Add this book to library</button>
 		</div>
 		<div Id = "remove" class = "forms">
-			<p>Removes book from library</p>
-			<select>SELECT_ISBN</select>
-			<button onclick = "removeBook()">delete this book</button>
+			<p>select isbn to delete a book</p>
+			<select id="isbnList" onchange = "displayBook()">SELECT_ISBN</select>
+			<button onclick = "showBook()">show this book</button>
+			<div id = "current_book">
+				<input id ="bookTitle" readonly = 'true' />
+				<input id ="bookAuthor" readonly = 'true' />
+			<button onclick = "removeBook()">remove book</button>
+			<label id = "book_removed">book removed from library</label>
+			</div>
 		</div>
-		<div Id = "update" class = "forms">
+		<div id = "update" class = "forms">
 			<p>Updates  information about book in library</p>
-			<input type = "number"  placeholder = "Enter ISBN" id="book_isbn" required = "true"/>
-			<input type = "text"  placeholder = "Enter book title" id="book_title" required = "true"/>
+			<input type = "number"  placeholder = "Enter ISBN" id="update_isbn" required = "true"/>
+			<input type = "text"  placeholder = "Enter book title" id="update_title" required = "true"/>
 			<button onclick = "updateBook()">update this book</button>
 		</div>
 	</body>

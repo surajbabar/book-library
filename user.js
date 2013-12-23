@@ -5,19 +5,18 @@ var library = require('./library/books_lib').record;
 var loginPage = fs.readFileSync("login.html","utf-8");
 var librarianPage = fs.readFileSync("librarian.html","utf-8");
 var books = library.Inventory();
+books =  books.split('\r\n');
 var visitHome = function(profile){     
+	var getISBN = function (bookdetails) {
+	bookdetails = JSON.parse(bookdetails);
+	var ISBN = "<option value="+bookdetails.isbn+">"+bookdetails.isbn+"</option>";
+	ISBNs.push(ISBN);
+	};
 	var isUser = profile.id!="admin" &&profile.password!="admin";
 	if(isUser)
 		window.document.write(homePage.replace('USERNAME',profile.Name));
 	else{
 		var ISBNs = [];
-		console.log(books);
-		var getISBN = function (bookdetails) {
-	bookdetails = JSON.parse(bookdetails);
-	var ISBN = "<option value="+bookdetails.isbn+">"+bookdetails.isbn+"</option>";
-	console.log(ISBN);			
-	ISBNs.push(ISBN);
-	};
 		books.pop();
 		books.forEach(getISBN);
 		librarianPage = librarianPage.replace('SELECT_ISBN',ISBNs);
@@ -45,15 +44,6 @@ exports.home = function(req, res){
 	if(profile) res.render('home',{notices:notices});     
 	else  visitLogin(req,res); 
 }; 
-exports.add_notice = function(req, res){     
-	var notice = req.body;
-	console.log(notice);     
-	notice.time = new Date();     
-	notice.sender =req.headers.cookie.split('=')[1];     
-	notices.unshift(notice);
-	fs.writeFile('./routes/notices.json',JSON.stringify(notices));
-	res.redirect('/home'); 
-};
 exports.logout = function(){
 	window.document.write(loginPage);
 };
